@@ -1,4 +1,4 @@
-#📈 Polynomial Regression Project
+📈 Polynomial Regression Project
 
 This project shows how to use Polynomial Regression in Python to make predictions based on data that follows a curve (not a straight line). It's helpful when simple linear regression doesn't work well because the data doesn't form a straight line.
 
