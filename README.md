@@ -38,35 +38,15 @@ This gives you 100 random values of X and Y which follow a curved pattern.
 Linear Regression draws a straight line — but doesn’t match the curve.
 Polynomial Regression fits a curved line — much better match!
 
-🛠️ Code for Polynomial Regression
-Here’s how we make the model:
 
-from sklearn.pipeline import Pipeline
-from sklearn.preprocessing import PolynomialFeatures
-from sklearn.linear_model import LinearRegression
-
-# Function to create and train polynomial regression model
-def poly_regression(degree):
-    poly_features = PolynomialFeatures(degree=degree, include_bias=True)
-    lin_reg = LinearRegression()
-    poly_pipeline = Pipeline([
-        ("poly_features", poly_features),
-        ("lin_reg", lin_reg)
-    ])
-    poly_pipeline.fit(X_train, y_train)
-    return poly_pipeline
 
 📊 How We Check Model Accuracy
-We use R² Score to check how well our model is performing:
-
-from sklearn.metrics import r2_score
-score = r2_score(y_test, y_pred)
-print("R2 Score:", score)
-Higher score (closer to 1) = better model
+We use R² Score to check how well our model is performing
 
 
-Linear regression gives low score (bad fit)
-Polynomial regression gives high score (good fit)
+
+->Linear regression gives low score (bad fit)
+->Polynomial regression gives high score (good fit)
 
 📈 Final Output
 Graphs will show:
@@ -75,20 +55,14 @@ Graphs will show:
 ->Polynomial regression curve (good fit)
 
 🏁 How to Run This Project
-Make sure Python is installed.
-
-Install the required libraries.
-
-Open the .ipynb file in Jupyter Notebook or Google Colab.
-
-Run the cells one by one to see the results.
+1. Make sure Python is installed.
+2. Install the required libraries.
+3. Open the .ipynb file in Jupyter Notebook or Google Colab.
+4. Run the cells one by one to see the results.
 
 ✅ What You Will Learn
 1. How to fit a curve using machine learning
-
 2. The difference between linear and polynomial models
-
 3. How to measure model performance using R² Score
-
 4. How to make simple plots using matplotlib
 
